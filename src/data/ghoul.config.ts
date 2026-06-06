@@ -178,12 +178,12 @@ export const config: GhoulConfig = {
       live: true,
     },
     {
-      id: "goo",
-      name: "GOO GHOUL",
-      domain: "https://www.ghoulverse.com/ghouls/goo/",
-      icon: "👻",
-      color: "#ff00ff",
-      realm: "The Goo Dimension",
+      id: "googoo",
+      name: "GOO GOO",
+      domain: "https://www.googooghoul.com",
+      icon: "🍼",
+      color: "#3b82f6",
+      realm: "The Nursery",
       live: true,
     },
     {
@@ -250,15 +250,6 @@ export const config: GhoulConfig = {
       live: false,
     },
     {
-      id: "googoo",
-      name: "GOO GOO",
-      domain: "https://www.ghoulverse.com/ghouls/googoo/",
-      icon: "🍼",
-      color: "#3b82f6",
-      realm: "The Nursery",
-      live: false,
-    },
-    {
       id: "kid",
       name: "KID GHOUL",
       domain: "https://www.kidghoul.com",
@@ -270,11 +261,11 @@ export const config: GhoulConfig = {
     {
       id: "teen",
       name: "TEEN GHOUL",
-      domain: "https://www.ghoulverse.com/ghouls/teen/",
+      domain: "https://www.teenghoul.com",
       icon: "🎧",
       color: "#8b5cf6",
       realm: "The Hangout",
-      live: false,
+      live: true,
     },
     {
       id: "scholar",
