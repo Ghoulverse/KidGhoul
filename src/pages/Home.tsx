@@ -171,24 +171,24 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="reveal mb-16">
             <h2 className="font-kid text-4xl md:text-5xl text-[#292524] mb-6 leading-tight">
-              The mess happens.<br />
-              <span className="text-[#ef4444]">The fun continues.</span>
+              Eww! Gross! AWESOME!<br />
+              <span className="text-[#ef4444]">We clean it all.</span>
             </h2>
             <p className="text-[#78716c]/70 text-base max-w-md mx-auto leading-relaxed font-light">
-              Paint on the walls? Glitter on the dog? A science experiment gone wild? We don't stop the chaos — we clean it up so the next adventure can begin.
+              Finger paint on the ceiling? Slime in your socks? A glitter explosion that reached the neighbours? No mess is too mega. We turn disasters into "let's do that again!"
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { icon: Palette, value: '∞', label: 'Masterpieces Made', color: '#ef4444' },
-              { icon: Sparkles, value: '100%', label: 'Smiles Saved', color: '#fbbf24' },
-              { icon: Zap, value: '<30s', label: 'Pigment Breakdown', color: '#3b82f6' },
-              { icon: Star, value: '11/10', label: 'Fun Factor', color: '#ef4444' },
+              { icon: Palette, value: '∞', label: 'Masterpieces Made', color: '#ef4444', rot: -2 },
+              { icon: Sparkles, value: '100%', label: 'Smiles Saved', color: '#fbbf24', rot: 1 },
+              { icon: Zap, value: '<30s', label: 'Pigment Breakdown', color: '#3b82f6', rot: -1 },
+              { icon: Star, value: '11/10', label: 'Fun Factor', color: '#ef4444', rot: 2 },
             ].map((stat, i) => (
-              <div key={i} className="reveal breathe p-8 text-center transition-all duration-500 hover:scale-[1.03]"
-                style={{ background: 'rgba(255,255,255,0.6)', borderRadius: '24px', border: '2px solid rgba(239,68,68,0.08)' }}>
-                <stat.icon className="w-8 h-8 mx-auto mb-4" style={{ color: stat.color, opacity: 0.8 }} />
+              <div key={i} className="reveal breathe p-8 text-center sticker-badge transition-all duration-300 hover:scale-[1.08]"
+                style={{ transform: `rotate(${stat.rot}deg)`, animationDelay: `${i * 0.5}s` }}>
+                <stat.icon className="w-8 h-8 mx-auto mb-4" style={{ color: stat.color, opacity: 0.9 }} />
                 <div className="font-kid text-3xl text-[#292524] mb-2 font-bold">{stat.value}</div>
                 <div className="text-[10px] tracking-[0.2em] uppercase text-[#78716c]/50 font-kid">{stat.label}</div>
               </div>
@@ -258,9 +258,9 @@ export default function Home() {
       <section ref={productRef} id="playground" className="relative py-32 md:py-48 px-8 md:px-16">
         <div className="max-w-5xl mx-auto">
           <div className="reveal text-center mb-16">
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[#ef4444]/50 mb-4 block font-kid">Product Architecture</span>
+            <span className="text-[10px] tracking-[0.4em] uppercase text-[#ef4444]/50 mb-4 block font-kid">Super Powers!</span>
             <h2 className="font-kid text-4xl md:text-5xl text-[#292524] mb-3">The Playground</h2>
-            <p className="text-[#78716c]/60 max-w-sm mx-auto font-light">Five lines. Nine formulations. Total chaos containment.</p>
+            <p className="text-[#78716c]/60 max-w-sm mx-auto font-light">Nine awesome weapons against mess. Pick your favourite colour!</p>
           </div>
 
           <div className="reveal flex flex-wrap justify-center gap-3 mb-16">
@@ -288,21 +288,21 @@ export default function Home() {
               const Icon = PRODUCT_ICONS[i % PRODUCT_ICONS.length];
               const colors = ['#ef4444', '#fbbf24', '#3b82f6'];
               const color = colors[i % colors.length];
+              const rotation = (i % 3 === 0) ? -1 : (i % 3 === 1) ? 1 : 0;
 
               return (
-                <div key={i} className="reveal orb-drift group p-8 text-center transition-all duration-500 hover:scale-[1.02]"
+                <div key={i} className="reveal orb-drift group p-8 text-center sticker-card"
                   style={{
-                    background: 'rgba(255,255,255,0.6)',
-                    borderRadius: '24px',
-                    border: '2px solid rgba(239,68,68,0.06)',
-                    boxShadow: `0 8px 40px ${color}08`,
+                    transform: `rotate(${rotation}deg)`,
+                    borderColor: `${color}25`,
+                    boxShadow: `4px 4px 0 ${color}15, 0 8px 40px ${color}08`,
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.boxShadow = `0 16px 50px ${color}15`; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.boxShadow = `0 8px 40px ${color}08`; }}>
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = `rotate(0deg) scale(1.05)`; e.currentTarget.style.boxShadow = `6px 6px 0 ${color}20, 0 16px 50px ${color}15`; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = `rotate(${rotation}deg) scale(1)`; e.currentTarget.style.boxShadow = `4px 4px 0 ${color}15, 0 8px 40px ${color}08`; }}>
 
                   <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5"
-                    style={{ background: `${color}12`, border: `2px solid ${color}18` }}>
-                    <Icon className="w-7 h-7" style={{ color, opacity: 0.8 }} />
+                    style={{ background: `${color}12`, border: `2px solid ${color}25` }}>
+                    <Icon className="w-7 h-7" style={{ color, opacity: 0.9 }} />
                   </div>
 
                   <span className="text-[9px] tracking-[0.3em] uppercase text-[#78716c]/40 block mb-3 font-kid">{product.category}</span>
@@ -401,8 +401,8 @@ export default function Home() {
               <div className="w-32 h-32 rounded-full opacity-[0.03] blur-3xl" style={{ background: '#ef4444' }} />
             </div>
             <Gamepad2 className="w-10 h-10 text-[#ef4444]/60 mx-auto mb-6" />
-            <h2 className="font-kid text-3xl md:text-4xl text-[#292524] mb-4">Play GHOULVERSE</h2>
-            <p className="text-[#78716c]/60 max-w-sm mx-auto mb-8 font-light">Pilot {config.name} through the Void. Battle bacteria, unlock all 12 ghouls.</p>
+            <h2 className="font-kid text-3xl md:text-4xl text-[#292524] mb-4">Play GHOULVERSE!</h2>
+            <p className="text-[#78716c]/60 max-w-sm mx-auto mb-8 font-light">Smash germs, collect power-ups, and unlock all 12 ghouls. High scores guaranteed!</p>
             <a href={config.gameUrl} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 font-kid text-sm tracking-wider text-[#ef4444] transition-all hover:scale-105 font-bold"
               style={{ border: '2px solid rgba(239,68,68,0.3)', borderRadius: '9999px' }}>

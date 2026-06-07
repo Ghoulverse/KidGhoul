@@ -138,4 +138,58 @@
     50% { transform: translate(-5px, 10px); }
     75% { transform: translate(15px, 5px); }
   }
+
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-1deg); }
+    25% { transform: rotate(1.5deg); }
+    50% { transform: rotate(-0.5deg); }
+    75% { transform: rotate(1deg); }
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  @keyframes paint-splat {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 0.15; }
+    100% { transform: scale(1); opacity: 0.1; }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+@layer components {
+  .sticker-card {
+    border-radius: 24px 28px 22px 30px;
+    border: 3px solid rgba(239, 68, 68, 0.15);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 4px 4px 0 rgba(239, 68, 68, 0.1);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .sticker-card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 6px 6px 0 rgba(239, 68, 68, 0.15), 0 12px 30px rgba(239, 68, 68, 0.1);
+  }
+
+  .sticker-badge {
+    border-radius: 9999px;
+    border: 3px dashed rgba(239, 68, 68, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    animation: wobble 4s ease-in-out infinite;
+  }
+
+  .paint-dot {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+    animation: paint-splat 0.6s ease-out forwards;
+  }
 }
