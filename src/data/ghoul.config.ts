@@ -288,9 +288,7 @@ export const config: GhoulConfig = {
   gameUrl: "https://www.ghoulverse.com/play/",
 
   social: {
-    twitter: "#",
-    instagram: "#",
-    youtube: "#",
+    // Social accounts launching Q2 2026 — follow @ghoulverse
   },
 
   science: {
@@ -308,7 +306,7 @@ export const config: GhoulConfig = {
 
   marketSize: "$120B global children's products market",
   traction: [
-    { label: "Character Websites", value: "7 Live", status: "complete" },
+    { label: "Character Websites", value: "10 Live", status: "complete" },
     { label: "GOO GHOUL™ Trademark", value: "IP Australia — Accepted", status: "complete" },
     { label: "GHOULVERSE Game", value: "Live", status: "complete" },
     { label: "Brand Partnerships", value: "Seeking First Deals", status: "upcoming" },

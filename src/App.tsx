@@ -1,6 +1,7 @@
 ﻿import KidMascot from '@/components/KidMascot';
 import KidParticles from '@/components/KidParticles';
 import Home from '@/pages/Home';
+import CookieBanner from '@/components/CookieBanner';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
 
       {/* Page content */}
       <Home />
-    </>
+      <CookieBanner />
+</>
   );
 }
