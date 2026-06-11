@@ -178,6 +178,15 @@ export const config: GhoulConfig = {
       live: true,
     },
     {
+      id: "goo",
+      name: "GOO GHOUL",
+      domain: "https://www.ghoulverse.com/ghouls/goo/",
+      icon: "👻",
+      color: "#00f0ff",
+      realm: "The Origin",
+      live: true,
+    },
+    {
       id: "googoo",
       name: "GOO GOO",
       domain: "https://www.googooghoul.com",
