@@ -69,9 +69,8 @@ export interface GhoulConfig {
 export const config: GhoulConfig = {
   id: "kid",
   name: "KID GHOUL",
-  tagline: "Chaos Contained",
-  description:
-    "KID GHOUL knows that creativity is messy. Paint on walls? Glitter on the dog? A science experiment gone wrong? KID GHOUL doesn't just clean — KID GHOUL encourages the next masterpiece.",
+  tagline: "Creativity, Contained",
+  description: "The kids' creative and family-lifestyle vertical. KID GHOUL knows that childhood is messy — and that mess is where learning happens.",
   domain: "https://www.kidghoul.com",
   icon: "🧒",
   isLeader: false,
@@ -278,7 +277,7 @@ export const config: GhoulConfig = {
     },
     {
       id: "scholar",
-      name: "SCHOLAR GHOUL",
+      name: "BOOK GHOUL",
       domain: "https://www.ghoulverse.com/ghouls/scholar/",
       icon: "📚",
       color: "#f97316",
@@ -304,7 +303,7 @@ export const config: GhoulConfig = {
     title: "The Science",
     subtitle: "Chromo-Capture Enzymes™",
     description: "Every KID GHOUL product is powered by Chromo-Capture Enzymes™ — a proprietary blend of pigment-dismantling enzymes that break down acrylics, waxes, and synthetic dyes at the molecular level. Crayon on drywall? Finger paint on hardwood? These enzymes encapsulate pigment particles and lift them away without stripping finishes or leaving residue.",
-    adaptation: "For The Playground, we engineered a child-safe variant with zero VOCs, zero bleach, and a pH of 7.0. Safe for little hands, devastating to little messes.",
+    adaptation: "For the Playground, we prioritise non-toxic, hypoallergenic ingredients that support creativity and exploration while making cleanup simple for families.",
     stats: [
       { label: "Pigment Breakdown", value: "<30s" },
       { label: "Surface Safety", value: "100%" },
@@ -333,7 +332,7 @@ export const config: GhoulConfig = {
     { phase: "Phase 2", title: "Mascot Creation", items: ["24 professional mascots (2 per ghoul)", "$120K investment across 12 characters"], status: "upcoming" },
     { phase: "Phase 3", title: "Partnerships & Revenue", items: ["Sector sponsorships", "Affiliate deals", "Event appearances", "Influencer recruitment"], status: "upcoming" },
     { phase: "Phase 4", title: "Entertainment Scale", items: ["Animated series pilot", "Convention circuit", "Merchandise licensing"], status: "upcoming" },
-    { phase: "Phase 5", title: "Product Launch", items: ["GOO GHOUL household cleaners", "Vertical-specific product lines"], status: "upcoming" },
+    { phase: "Phase 5", title: "Product Launch", items: ["GOO GHOUL flagship household line", "Vertical-specific owned product lines"], status: "upcoming" },
   ],
 
   fundingAsk: "$250,000 AUD",
@@ -358,6 +357,6 @@ export const config: GhoulConfig = {
     { stream: "Licensing", description: "Character IP licensing to brands", timeline: "Year 2" },
     { stream: "Merchandise", description: "Royalties on plush, apparel, accessories", timeline: "Year 2" },
     { stream: "Animation", description: "YouTube/streaming ad revenue, distribution deals", timeline: "Year 2" },
-    { stream: "Products", description: "Owned product lines (GOO GHOUL cleaners first)", timeline: "Year 3" },
+    { stream: "Products", description: "Owned product lines launched per vertical, starting with GOO GHOUL", timeline: "Year 3" },
   ],
 };

@@ -260,7 +260,7 @@ export default function Home() {
           <div className="reveal text-center mb-16">
             <span className="text-[10px] tracking-[0.4em] uppercase text-[#ef4444]/50 mb-4 block font-kid">Super Powers!</span>
             <h2 className="font-kid text-4xl md:text-5xl text-[#292524] mb-3">The Playground</h2>
-            <p className="text-[#78716c]/60 max-w-sm mx-auto font-light">Nine awesome weapons against mess. Pick your favourite colour!</p>
+            <p className="text-[#78716c]/60 max-w-sm mx-auto font-light">Nine awesome products for creative kids. Pick your favourite colour!</p>
           </div>
 
           <div className="reveal flex flex-wrap justify-center gap-3 mb-16">
@@ -402,7 +402,7 @@ export default function Home() {
             </div>
             <Gamepad2 className="w-10 h-10 text-[#ef4444]/60 mx-auto mb-6" />
             <h2 className="font-kid text-3xl md:text-4xl text-[#292524] mb-4">Play GHOULVERSE!</h2>
-            <p className="text-[#78716c]/60 max-w-sm mx-auto mb-8 font-light">Smash germs, collect power-ups, and unlock all 12 ghouls. High scores guaranteed!</p>
+            <p className="text-[#78716c]/60 max-w-sm mx-auto mb-8 font-light">Collect power-ups, dodge obstacles, and unlock all 12 ghouls. High scores guaranteed!</p>
             <a href={config.gameUrl} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 font-kid text-sm tracking-wider text-[#ef4444] transition-all hover:scale-105 font-bold"
               style={{ border: '2px solid rgba(239,68,68,0.3)', borderRadius: '9999px' }}>
